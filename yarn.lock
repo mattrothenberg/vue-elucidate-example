@@ -4819,9 +4819,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-elucidate@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/vue-elucidate/-/vue-elucidate-0.8.0.tgz#37300ea36a591dcd400a33485e5afa71218e8837"
+vue-elucidate@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/vue-elucidate/-/vue-elucidate-0.9.0.tgz#5c9b0955ed02a3ee0b202f8529efe1c59bd9f1d5"
   dependencies:
     css-loader "^0.28.7"
     js-beautify "^1.7.3"

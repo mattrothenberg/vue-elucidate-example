@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <side-navigation></side-navigation>
-    <main class="ph3 pv3 ph4-l">
+    <main class="ph3 pv3 ph4-l mw8-l">
       <router-view :key="$route.fullPath"/>
     </main>
   </div>
@@ -9,6 +9,7 @@
 
 <script>
 import SideNavigation from '@/components/SideNavigation.vue'
+import '@/assets/darcula.css'
 
 export default {
   name: 'app',

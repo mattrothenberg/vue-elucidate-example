@@ -24,6 +24,48 @@ const components = {
         }
       }
     }
+  },
+  'UiAutocomplete': {
+    example: {
+      markup: `<ui-autocomplete
+  help="Pick your favourite month of the year"
+  label="Favourite Month"
+  name="favourite_month"
+  placeholder="Enter your favourite month"
+  :suggestions="months"
+  v-model="selected">
+</ui-autocomplete>`,
+      props: {
+        months: [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December'
+        ],
+        selected: ''
+      }
+    }
+  },
+  'UiCheckbox': {
+    example: {
+      markup: `<ui-checkbox @change="handleChange" v-model="checked">Check me</ui-checkbox>`,
+      props: {
+        checked: false
+      },
+      methods: {
+        handleChange (e) {
+          console.log(e)
+        }
+      }
+    }
   }
 }
 export default components

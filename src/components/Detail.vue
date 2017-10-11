@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2 class="mt0 mb3 near-black fw6">{{$route.params.name}}</h2>
     <elucidate :example="example" :component="example.component"></elucidate>
   </div>
 </template>
@@ -24,3 +25,13 @@
     }
   }
 </script>
+
+<style>
+  .preview {
+    background: white;
+  }
+
+  .props-table {
+    font-size: 14px;
+  }
+</style>
