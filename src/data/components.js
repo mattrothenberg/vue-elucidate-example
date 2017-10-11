@@ -66,6 +66,51 @@ const components = {
         }
       }
     }
+  },
+  'UiMenu': {
+    example: {
+      markup: `<ui-menu :options="menuOptions" raised></ui-menu>`,
+      props: {
+        menuOptions: [
+          {
+            id: 'edit',
+            label: 'Edit',
+            icon: 'edit',
+            secondaryText: 'Ctrl+E'
+          },
+          {
+            id: 'duplicate',
+            label: 'Duplicate',
+            icon: 'content_copy',
+            secondaryText: 'Ctrl+D'
+          },
+          {
+            id: 'share',
+            label: 'Share',
+            icon: 'share',
+            secondaryText: 'Ctrl+Shift+S',
+            disabled: true
+          },
+          {
+            type: 'divider'
+          },
+          {
+            id: 'delete',
+            label: 'Delete',
+            icon: 'delete',
+            secondaryText: 'Del'
+          }
+        ]
+      }
+    }
+  },
+  'UiSwitch': {
+    example: {
+      markup: `<ui-switch v-model="shouldThey">Should Designers Code?</ui-switch>`,
+      props: {
+        shouldThey: false
+      }
+    }
   }
 }
 export default components

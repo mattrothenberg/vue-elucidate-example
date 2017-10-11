@@ -28,7 +28,8 @@
 
 <style>
   .preview {
-    background: white;
+    background: transparent !important;
+    border: 1px solid rgba(0, 0, 0, .1);
   }
 
   .props-table {
