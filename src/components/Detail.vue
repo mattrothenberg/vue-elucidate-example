@@ -20,6 +20,7 @@
       let match = components[this.$route.params.name]
       this.example = match.example
       this.example.component = require(`keen-ui/lib/${this.$route.params.name}`).default
+      this.$forceUpdate()
     }
   }
 </script>

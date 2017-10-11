@@ -2,7 +2,7 @@
   <div id="app">
     <side-navigation></side-navigation>
     <main class="ph3 pv3 ph4-l">
-      <router-view/>
+      <router-view :key="$route.fullPath"/>
     </main>
   </div>
 </template>
