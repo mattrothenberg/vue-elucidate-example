@@ -7,6 +7,7 @@ import 'tachyons'
 import 'keen-ui/dist/keen-ui.css'
 import 'keen-ui/src/bootstrap'
 import '@/assets/darcula.css'
+import 'vue-elucidate/dist/style.css'
 Vue.use(Router)
 Vue.use(Elucidate)
 

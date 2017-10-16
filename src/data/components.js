@@ -1,18 +1,35 @@
 const components = {
   'UiButton': {
-    example: {
-      markup: '<ui-button :color="color" @click="yell" raised>RawrAWrawr</ui-button>',
-      props: {
-        color: 'primary'
+    component: 'UiButton',
+    example: [
+      {
+        markup: '<ui-button :color="color" @click="yell" raised>RawrAWrawr</ui-button>',
+        name: 'Red Button',
+        props: {
+          color: 'primary'
+        },
+        methods: {
+          yell () {
+            console.log('LOUD NOISES')
+          }
+        }
       },
-      methods: {
-        yell () {
-          console.log('LOUD NOISES')
+      {
+        markup: '<ui-button :color="color" @click="yell" raised>RawrAWrawr</ui-button>',
+        name: 'Orange',
+        props: {
+          color: 'orange'
+        },
+        methods: {
+          yell () {
+            console.log('LOUD NOISES')
+          }
         }
       }
-    }
+    ]
   },
   'UiAlert': {
+    component: 'UiAlert',
     example: {
       markup: `<ui-alert @dismiss="dismiss" v-show="showAlert">Hi everybody! This is the default alert.</ui-alert>`,
       props: {
@@ -26,6 +43,7 @@ const components = {
     }
   },
   'UiAutocomplete': {
+    component: 'UiAutocomplete',
     example: {
       markup: `<ui-autocomplete
   help="Pick your favourite month of the year"
@@ -55,6 +73,7 @@ const components = {
     }
   },
   'UiCheckbox': {
+    component: 'UiCheckbox',
     example: {
       markup: `<ui-checkbox @change="handleChange" v-model="checked">Check me</ui-checkbox>`,
       props: {
@@ -68,6 +87,7 @@ const components = {
     }
   },
   'UiMenu': {
+    component: 'UiMenu',
     example: {
       markup: `<ui-menu :options="menuOptions" raised></ui-menu>`,
       props: {
@@ -105,11 +125,21 @@ const components = {
     }
   },
   'UiSwitch': {
+    component: 'UiSwitch',
     example: {
       markup: `<ui-switch v-model="shouldThey">Should Designers Code?</ui-switch>`,
       props: {
         shouldThey: false
       }
+    }
+  },
+  'UiTabs': {
+    component: ['UiTabs', 'UiTab'],
+    example: {
+      markup: `<ui-tabs>
+  <ui-tab title="Settings">Settings Page</ui-tab>
+  <ui-tab title="Preferences">Preference Page</ui-tab>
+</ui-tabs>`
     }
   }
 }

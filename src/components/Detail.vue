@@ -20,8 +20,14 @@
     created () {
       let match = components[this.$route.params.name]
       this.example = match.example
-      this.example.component = require(`keen-ui/lib/${this.$route.params.name}`).default
-      this.$forceUpdate()
+      if (Array.isArray(match.component)) {
+        this.example.component = []
+        match.component.forEach(c => {
+          this.example.component.push(require(`keen-ui/lib/${c}`).default)
+        })
+      } else {
+        this.example.component = require(`keen-ui/lib/${match.component}`).default
+      }
     }
   }
 </script>
